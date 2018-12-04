@@ -1,3 +1,26 @@
+@font-face {
+  font-family: 'GT Walsheim';
+  font-style: normal;
+  font-weight: 400;
+  src: local('GT Walsheim'), url(./fonts/gt-walsheim.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'GT Walsheim';
+  font-style: normal;
+  font-weight: 500;
+  src: local('GT Walsheim Medium'),
+    url(./fonts/gt-walsheim-medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'GT Walsheim';
+  font-style: normal;
+  font-weight: 700;
+  src: local('GT Walsheim Bold'),
+    url(./fonts/gt-walsheim-bold.woff) format('woff');
+}
+
 html,
 body,
 iframe,
@@ -8,17 +31,12 @@ iframe,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'GT Walsheim', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
   line-height: 1.4;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 h1,
