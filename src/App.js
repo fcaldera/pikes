@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import styled from 'styled-components';
+import OverviewCard from './components/OverviewCard';
 
 const PageHeader = styled.h1`
   border-bottom: 1px solid #eaeff1;
@@ -10,18 +11,6 @@ const PageHeader = styled.h1`
 
 const Section = styled.section`
   margin-bottom: 3rem;
-`;
-
-const Card = styled.div`
-  padding: 2.25rem;
-  border-radius: 10px;
-  margin-right: 1.75rem;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-`;
-
-const OverviewCard = styled(Card)`
-  color: #333;
-  width: 238px;
 `;
 
 const Scrollable = styled.div`
@@ -38,8 +27,8 @@ class App extends Component {
         <Section>
           <h3>Overview</h3>
           <Scrollable>
-            <OverviewCard>dfasdf</OverviewCard>
-            <OverviewCard>dfasdf</OverviewCard>
+            <OverviewCard label="active buyers" value="101" />
+            <OverviewCard label="inactive" value="48" />
           </Scrollable>
         </Section>
         <Section>
