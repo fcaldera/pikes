@@ -9,7 +9,7 @@ const Card = styled.div`
   display: inline-block;
 
   & + & {
-    margin-left: 1.75rem;
+    margin-left: 1.5rem;
   }
 `;
 
