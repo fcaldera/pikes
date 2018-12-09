@@ -19,6 +19,12 @@
   src: local('GT Walsheim Bold'), url(./fonts/gt-walsheim-bold.woff) format('woff');
 }
 
+:root {
+  --purple: #4361f3;
+  --deep-purple: #2c45cf;
+  --pink: #e7649e;
+}
+
 html, body, iframe, #root {
   height: 100%;
 }
