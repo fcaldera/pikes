@@ -2,71 +2,24 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import OverviewCard from './components/OverviewCard';
 import PurchaseCard from './components/PurchaseCard';
-import Menu from './components/Menu';
+import { MenuIcon } from './components/Icon';
+import Scrollable from './components/Scrollable';
+import { Navbar, Nav, NavLink } from './components/Navigation';
+import Header from './components/Header';
 
 const StyledApp = styled.div`
   padding: 3.5rem 2rem;
 `;
 
-const PageHeader = styled.h1`
-  border-bottom: 1px solid #eaeff1;
-  line-height: 2.5;
+export const Section = styled.section`
   margin-bottom: 3rem;
-`;
-
-const Section = styled.section`
-  margin-bottom: 3rem;
-`;
-
-const Scrollable = styled.div`
-  margin: -4rem -2rem;
-  padding: 4rem 2rem;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-`;
-
-const Navbar = styled.nav`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.95);
-`;
-
-const Nav = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-`;
-
-const NavItem = styled.button`
-  color: #000;
-  line-height: 1;
-  width: 3rem;
-  height: 3rem;
-  padding: 0;
-  font-size: 2rem;
-`;
-
-const RoundedNavItem = styled(NavItem)`
-  font-size: 1rem;
-  color: #fff;
-  background-color: #000;
-  border-radius: 50%;
 `;
 
 class App extends Component {
   render() {
     return (
       <StyledApp>
-        <header className="App-header">
-          <PageHeader>15 December 2017</PageHeader>
-        </header>
+        <Header>15 December 2017</Header>
         <main>
           <Section>
             <h3>Overview</h3>
@@ -101,13 +54,13 @@ class App extends Component {
         </main>
         <Navbar>
           <Nav>
-            <NavItem>
-              <Menu vertical />
-            </NavItem>
-            <RoundedNavItem>%</RoundedNavItem>
-            <NavItem>
-              <Menu />
-            </NavItem>
+            <NavLink>
+              <MenuIcon vertical />
+            </NavLink>
+            <NavLink active>%</NavLink>
+            <NavLink>
+              <MenuIcon />
+            </NavLink>
           </Nav>
         </Navbar>
       </StyledApp>
