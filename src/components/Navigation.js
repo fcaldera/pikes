@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { MenuIcon } from './Icon';
 
 export const Navbar = styled.div`
   position: fixed;
@@ -14,15 +13,6 @@ export const Nav = styled.nav`
   justify-content: space-between;
   padding: 1rem 1rem;
 `;
-
-// export const NavItem = styled.li`
-//   color: #000;
-//   line-height: 1;
-//   width: 3rem;
-//   height: 3rem;
-//   padding: 0;
-//   font-size: 1.5rem;
-// `;
 
 const active = css`
   color: #fff;
@@ -47,10 +37,3 @@ export const NavLink = styled.a`
 
   ${props => props.active && active}
 `;
-
-// export const RoundedNavItem = styled(NavItem)`
-//   font-size: 1rem;
-//   color: #fff;
-//   background-color: #000;
-//   border-radius: 50%;
-// `;
