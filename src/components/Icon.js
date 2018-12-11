@@ -1,7 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
+import { NavLink } from './Navigation';
 
-const Menu = ({ vertical, ...rest }) => (
-  <svg
+const Icon = styled.svg`
+  ${NavLink} & {
+    font-size: 1.3rem;
+  }
+`;
+
+export const MenuIcon = ({ vertical, ...rest }) => (
+  <Icon
     width="1em"
     height="1em"
     viewBox="0 0 24 24"
@@ -13,7 +21,5 @@ const Menu = ({ vertical, ...rest }) => (
       d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
       transform="rotate(45 50% 50%)"
     />
-  </svg>
+  </Icon>
 );
-
-export default Menu;
